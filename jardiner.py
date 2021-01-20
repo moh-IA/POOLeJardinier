@@ -1,4 +1,5 @@
 from vegetable_factory import VegetableFactory
+from garden import Garden
 # from vegetable import Vegetable
 
 class Jardinier():
@@ -10,6 +11,7 @@ class Jardinier():
 
     
     def planter(self):
-        veget_name = input("set the vegetable that want to plant")
+        veget_name = input("set the vegetable that want to plant :")
         vegetable = self.vf.get_vegetable(veget_name)
         return vegetable
+    

@@ -10,8 +10,13 @@ class Garden():
         self.vegetables = []
 
     def _plant(self, vegetable):
+        
         self.seeds += vegetable.seed
-        self.vegetables.append(vegetable)
+        if self.seeds <= 30:
+            self.vegetables.append(vegetable)
+        else:
+            self.seeds -= vegetable.seed
+            print('The garden can not grow more than thirty seeds')
        
     def add(self, vegetable):
         return self._plant(vegetable) 
